@@ -8,25 +8,27 @@ Steps to execute program:
 
 
 Included in this task are the following files: 
-• This “readme” file 
-• An interface called SaleObjectConsumer 
-• Two example files with different formats, but similar data: SaleObjects.csv and SaleObjects.xml 
+	• This “readme” file 
+	• An interface called SaleObjectConsumer 
+	• Two example files with different formats, but similar data: SaleObjects.csv and SaleObjects.xml 
 The goal of this fictive task is to write an application that reads the content from files with content written in different formats, 
 but containing similar data, and reporting that data to our partner companies. As the data is similar, the content of the files may be 
-reported using the same interface, called “SaleObjectConsumer” (which is included in this task). To fulfill the task, you must: 
+reported using the same interface, called “SaleObjectConsumer” (which is included in this task). 
 
-• Parse the two data files, containing meta-data (called SaleObjects) describing houses and apartments. 
-• Report all the parsed SaleObjects to our partners systems by using the interface in the following order: 
-	1. Call getPriorityOrderAttribute() to get the attribute to order the SaleObjects by before reporting them. 
-	2. Call startSaleObjectTransaction() before reporting any SaleObjects. 
-	3. Call reportSaleObject() for each sale object in prioritized order. 
-	4. Call commitSaleObjectTransaction() when done reporting SaleObjects. 
-• Remember to read the documentation in the SaleObjectConsumer interface file. 
+To fulfill the task, you must: 
+	• Parse the two data files, containing meta-data (called SaleObjects) describing houses and apartments. 
+	• Report all the parsed SaleObjects to our partners systems by using the interface in the following order: 
+		1. Call getPriorityOrderAttribute() to get the attribute to order the SaleObjects by before reporting them. 
+		2. Call startSaleObjectTransaction() before reporting any SaleObjects. 
+		3. Call reportSaleObject() for each sale object in prioritized order. 
+		4. Call commitSaleObjectTransaction() when done reporting SaleObjects. 
+	• Remember to read the documentation in the SaleObjectConsumer interface file. 
 
 Note! 
 #1 As of now we have not received any implementation of the SaleObjectConsumer-interface from our partners, but we are confident that 
 your solution will work regardless of their chosen implementation. Note! You may report any amount of SaleObjects to the interface after 
 having called the method startSaleObjectTransaction, but after calling endSaleObjectTransaction you must start over from step 
+
 #2 if you wish to send additional SaleObjects. There are three different file formats included: CSV, XML and Json. You do not have to parse 
 all of them. Please choose the two formats you are most comfortable parsing (and feel free to use any third-party parsing library of your 
 choosing if you want to). 
